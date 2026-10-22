@@ -1,0 +1,49 @@
+{
+  "name": "difftick",
+  "version": "0.1.0",
+  "description": "Review smarter. Mark faster. Bulk Viewed marking, filters and recursive folder selection for GitHub Pull Request files.",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "author": "Eliseu Mendes de Morais",
+  "homepage": "https://github.com/seoeliseu/difftick#readme",
+  "bugs": {
+    "url": "https://github.com/seoeliseu/difftick/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seoeliseu/difftick.git"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vite build --watch",
+    "preview": "vite --open /dev/preview.html",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "icons": "node scripts/generate-icons.mjs",
+    "check": "npm run lint && npm run typecheck && npm test && npm run build"
+  },
+  "dependencies": {
+    "preact": "^11.0.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^22.20.5",
+    "eslint": "^10.13.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.13.0",
+    "jsdom": "^30.1.3",
+    "prettier": "^3.9.10",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.72.0",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  }
+}

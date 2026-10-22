@@ -1,0 +1,57 @@
+name: Bug report
+description: Something does not work, or a file is wrongly reported as "not reachable".
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! **Never paste private source code or tokens.** Sanitise any DOM snippet first.
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: Chrome 141 / Brave 1.8x on Windows 11
+    validations:
+      required: true
+  - type: dropdown
+    id: layout
+    attributes:
+      label: Which Files changed layout?
+      description: See docs/MANUAL_TESTING.md, section 1, to find out.
+      options:
+        - Classic (/files)
+        - New (/changes)
+        - Not sure
+    validations:
+      required: true
+  - type: dropdown
+    id: signed-in
+    attributes:
+      label: Signed in to GitHub?
+      options:
+        - 'Yes'
+        - 'No'
+    validations:
+      required: true
+  - type: input
+    id: size
+    attributes:
+      label: Approximate number of files in the PR
+      placeholder: '~120'
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened, and what did you expect?
+      description: Include the counts shown by DiffTick (succeeded / failed / skipped / not reachable) if relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+  - type: textarea
+    id: dom
+    attributes:
+      label: Sanitised DOM snippet of the Viewed control (optional)
+      description: "Right-click the Viewed checkbox, Inspect, then in the console run `copy($0.closest('form, label, div').outerHTML)`."
+      render: html

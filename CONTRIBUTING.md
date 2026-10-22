@@ -31,7 +31,7 @@ Load `dist/` as an unpacked extension (see the [README](README.md#install-unpack
 
 - Branch from `main`, keep PRs focused, and describe the behaviour change and how you tested it.
 - Add or update tests with the change. Bug fixes need a test that fails without the fix.
-- Run `npm run check` before pushing; CI runs the same commands plus `npm run format:check`.
+- Run `npm run check` and `npm run format:check` before pushing. The CI workflow runs the same commands but is manual-only (Actions tab → "Run workflow"); it does not start on pushes or pull requests.
 - Format with `npm run format`.
 
 ## Tests

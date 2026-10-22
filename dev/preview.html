@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" data-color-mode="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DiffTick preview (fake GitHub page)</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        margin: 0;
+        padding: 16px 16px 120px;
+        background: #fff;
+        color: #1f2328;
+      }
+      html[data-color-mode='dark'] body {
+        background: #0d1117;
+        color: #f0f6fc;
+      }
+      .banner {
+        margin-bottom: 12px;
+        padding: 8px 12px;
+        border: 1px dashed #9a6700;
+        border-radius: 6px;
+        font-size: 13px;
+      }
+      .file {
+        margin: 0 0 8px;
+        border: 1px solid #d1d9e0;
+        border-radius: 6px;
+      }
+      .file-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 6px 10px;
+        font:
+          12px ui-monospace,
+          monospace;
+      }
+      file-tree {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <strong>DiffTick preview.</strong> This page imitates GitHub's classic Files changed markup
+      with fake files; it is not GitHub. Query: <code>?theme=dark</code>,
+      <code>?flaky=1</code> (GitHub "rejects" some files), <code>?files=300</code>,
+      <code>?hidden=20</code> (known but not rendered).
+    </div>
+    <div id="page"></div>
+    <script type="module" src="./preview.ts"></script>
+  </body>
+</html>
